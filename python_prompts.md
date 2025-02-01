@@ -16,13 +16,3 @@ def fetch_data(url):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
-Prompt 2: Data Processing
-Input Prompt:
-"Write a Python script to read a CSV file, clean the data by removing null values, and save the cleaned data to a new CSV file."
-
-Example Output:import pandas as pd
-
-def clean_csv(input_file, output_file):
-    df = pd.read_csv(input_file)
-    df.dropna(inplace=True)
-    df.to_csv(output_file, index=False)
